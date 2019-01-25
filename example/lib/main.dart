@@ -23,23 +23,23 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     bannerSize = AdmobBannerSize.BANNER;
 
-    interstitialAd = AdmobInterstitial(
-      adUnitId: 'ca-app-pub-3940256099942544/1033173712',
-      listener: (AdmobAdEvent event, Map<String, dynamic> args) {
-        if (event == AdmobAdEvent.closed) interstitialAd.load();
-        handleEvent(event, args, 'Interstitial');
-      },
-    );
-
-    rewardAd = AdmobReward(
-        adUnitId: 'ca-app-pub-3940256099942544/5224354917',
-        listener: (AdmobAdEvent event, Map<String, dynamic> args) {
-          if (event == AdmobAdEvent.closed) rewardAd.load();
-          handleEvent(event, args, 'Reward');
-        });
-
-    interstitialAd.load();
-    rewardAd.load();
+//    interstitialAd = AdmobInterstitial(
+//      adUnitId: 'ca-app-pub-3940256099942544/1033173712',
+//      listener: (AdmobAdEvent event, Map<String, dynamic> args) {
+//        if (event == AdmobAdEvent.closed) interstitialAd.load();
+//        handleEvent(event, args, 'Interstitial');
+//      },
+//    );
+//
+//    rewardAd = AdmobReward(
+//        adUnitId: 'ca-app-pub-3940256099942544/5224354917',
+//        listener: (AdmobAdEvent event, Map<String, dynamic> args) {
+//          if (event == AdmobAdEvent.closed) rewardAd.load();
+//          handleEvent(event, args, 'Reward');
+//        });
+//
+//    interstitialAd.load();
+//    rewardAd.load();
   }
 
   void handleEvent(
